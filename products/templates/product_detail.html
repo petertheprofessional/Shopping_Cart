@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Product Details</title>
+  </head>
+  <body>
+
+    <h1>{{ product.name }}</h1>
+    <img height="200px" src="{{ product.picture }}">
+    <ul>
+        <li>Price: {{ product.price }}</li>
+        <li>Manufacturer: {{ product.manufacturer.name }}</li>
+        <li>Categories</li>
+            <ul>
+                {% for category in product.categories.all %}
+                <li>{{category.name}}</li>
+                {% endfor %}
+            </ul>
+    </ul>
+        <a href="/products">Back</a>
+  </body>
+</html>

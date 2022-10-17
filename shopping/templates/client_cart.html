@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<h1>{{ client.first_name }} {{ client.last_name }}</h1>
+  <body>
+    Has a cart id of{{cart.id}} which contains:
+  <ul>
+    {% for product in products %}
+    <li>Product: {{product.name}} Price: {{product.price}}</li>
+    {% endfor %}
+      Total = € {{total.price__sum}}
+  </ul>
+  </body>
+</html>

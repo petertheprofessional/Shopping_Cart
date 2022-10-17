@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Detail</title>
+</head>
+<body>
+    <h1>{{category.name}} Category Details</h1>
+    <ul>
+        <li>{{category.description}}</li>
+    </ul>
+    <h4>Products in this category</h4>
+    <ul>
+        {% for product in category.products.all %}
+            <li>{{product.name}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

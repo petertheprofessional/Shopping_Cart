@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Details</title>
+</head>
+<h1>{{client.first_name}} {{client.last_name}}</h1>
+
+<body>
+    <h4>Addresses</h4>
+        <ul>
+            {% for client in addresses %}
+                <li>Street: {{ client.street }}</li>
+                <li>Number: {{ client.number }}</li>
+                <li>City: {{ client.city }}</li>
+                <li>ZIP: {{ client.zip }}</li>
+                <li>Country: {{ client.country }}</li>
+                <hr style="width: 100px">
+            {% endfor %}
+        </ul>
+    <h4>Profiles</h4>
+        <ul>
+            <li>{{client.profile.avatar}}</li>
+            <li>{{client.profile.about_me}}</li>
+            <li>{{client.profile.settings}}</li>
+        </ul>
+            <a href="/clients">Back</a>
+</body>
+</html>

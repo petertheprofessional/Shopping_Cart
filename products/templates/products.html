@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<h1>The Phones</h1>
+    filters: {{ filters }}
+    <body>
+        <ul>
+            {% for product in products %}
+                <li><img height="50px" src="{{product.picture}}"><a href="/products/{{product.id}}">{{product.name}}</a> - ${{product.price}}</li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
